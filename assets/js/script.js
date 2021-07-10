@@ -39,12 +39,15 @@ function generatePassword() {
       passwordCharacters += " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     }
         
+
+    for (var i = 0; i < passwordLength; i++) {
+      newPassword += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
+    }
   }
+	console.log("Pasword is: " + newPassword);
+	return newPassword;
+
 }
-
-
-
-
 
 var generateBtn = document.querySelector("#generate");
 
