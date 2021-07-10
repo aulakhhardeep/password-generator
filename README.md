@@ -5,7 +5,7 @@ This application will create a random password. You have the option to add or re
 Javascipt, CSS and HTML
 
 # Screenshot of Application:
-![first prompt screenshot] (1.JPG)
+![first prompt screenshot] (assets/images/1.JPG)
 
 # Link for deployed Application:
 https://aulakhhardeep.github.io/password-generator/
