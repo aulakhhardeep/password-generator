@@ -15,15 +15,30 @@ function generatePassword() {
   
   passwordCharacters = "";
   newPassword = "";
-	var passwordLength = pwLength(); // Length of Password Requestd
-	var lowerCase = window.confirm("Do you want to add Lowercase Letters?"); // Use Lowercase Letters?
-	var upperCase = window.confirm("Do you want to add Uppercase Letters?"); // Use Uppercase Letters?
-	var numbers = window.confirm("Do you want to add Numbers?"); // Use Numbers?
-  var specialChar = window.confirm("Do you want to add Special Characters?"); // Use Special Characters? 
+	var passwordLength = pwLength(); // Length of Password Requested
+	var lowerCase = window.confirm("Do you want to add Lowercase Letters?"); 
+	var upperCase = window.confirm("Do you want to add Uppercase Letters?"); 
+	var numbers = window.confirm("Do you want to add Numbers?"); 
+  var specialChar = window.confirm("Do you want to add Special Characters?");
 
   if (lowerCase === false && upperCase === false && numbers === false && specialChar === false) {
     window.alert("Please select at least one password criteria.");
     generatePassword();
+  }
+  else { 
+    if (lowerCase) { //checks if the password requirement is lowerCase and generate a password with lowercase characters
+      passwordCharacters = "abcdefghijklmnopqrstuvwxyz";
+    }
+    if (upperCase) { //checks if the password requirement is uperCase and generate a password with uppercase characters
+      passwordCharacters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+    if (numbers) {//checks if the password requirement is number and generate a password with numbers
+      passwordCharacters += "0123456789";
+    }
+    if (specialChar) {//checks if the password requirement is specialChar and generate a password with special characters
+      passwordCharacters += " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+    }
+        
   }
 }
 
