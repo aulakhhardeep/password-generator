@@ -20,6 +20,11 @@ function generatePassword() {
 	var upperCase = window.confirm("Do you want to add Uppercase Letters?"); // Use Uppercase Letters?
 	var numbers = window.confirm("Do you want to add Numbers?"); // Use Numbers?
   var specialChar = window.confirm("Do you want to add Special Characters?"); // Use Special Characters? 
+
+  if (lowerCase === false && upperCase === false && numbers === false && specialChar === false) {
+    window.alert("Please select at least one password criteria.");
+    generatePassword();
+  }
 }
 
 
